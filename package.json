@@ -1,10 +1,11 @@
 {
   "name": "creatapi",
   "version": "1.0.0",
+  "private": true,
   "description": "try creat API for tic_tac",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
   "author": "saper663",
   "license": "ISC",
@@ -12,5 +13,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongodb": "^3.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
   }
 }

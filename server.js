@@ -4,6 +4,12 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const port = 8000;
+require('./app/routes')(app, {});
 app.listen(port, () => {
   console.log(`We are living on ${port}`)
 });
+module.exports = function(app, db) {
+  app.post('/notes', (req, res) => {
+    res.send('Hi!')
+  });
+};

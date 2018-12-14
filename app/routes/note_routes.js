@@ -1,11 +1,28 @@
 var ObjectId = require('mongodb').ObjectId;
+var  test = require('assert');
+
 
 module.exports = function(app, client) {
   const db = client.db('saperdb');
+  const notes = db.collection('notes');
+
+  app.get('/notes/all', (req, res) => {
+        notes.find().toArray(function(err, docs) {
+        //  test.equal(null, err);
+        //  test.equal(4, docs.length);
+          if (err) {
+            res.send({ 'error': 'An error has occured'});
+          } else {
+            res.send(docs);
+          }
+        });
+    });
+
+
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { '_id': new ObjectId(id) };
-    db.collection('notes').findOne(details, (err, item) => {
+    notes.findOne(details, (err, item) => {
       if (err) {
         res.send({ 'error': 'An error has occured'});
       } else {
@@ -17,7 +34,7 @@ module.exports = function(app, client) {
   app.delete('/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { '_id': new ObjectId(id) };
-    db.collection('notes').deleteOne(details, (err, item) => {
+    notes.deleteOne(details, (err, item) => {
       if (err) {
         res.send({ 'error': 'An error has occured' });
       } else {
@@ -28,7 +45,7 @@ module.exports = function(app, client) {
 
   app.post('/notes', (req, res) => {
     const note = { text: req.body.body, title: req.body.title };
-    db.collection('notes').insertOne(note, (err, result) => {
+    notes.insertOne(note, (err, result) => {
       if (err) {
         res.send({ 'error': 'An error has occured' });
       } else {
@@ -41,7 +58,7 @@ module.exports = function(app, client) {
     const id = req.params.id;
     const details = { '_id': new ObjectId(id) };
     const note = { text: req.body.body, title: req.body.title };
-    db.collection('notes').update(details, note, (err, result) => {
+    notes.updateOne(details, note, (err, result) => {
       if (err) {
         res.send({ 'error': 'An error has occured' });
       } else {

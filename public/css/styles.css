@@ -1,0 +1,119 @@
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	height: 100%;
+	background-color: #888888;
+
+}
+h1 {
+	color:red;
+}
+h2 {
+	text-align: center;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+button {
+	width: 20%;
+	height: 10%;
+	background-color: #CAD1F2;
+}
+.whomToPlay {
+	margin: auto;
+}
+.button {
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.button :focus {
+	outline: none !important;
+}
+.start {
+  text-align: center;
+	margin-bottom: 20px;
+
+}
+.wrapper {
+	height: 350px;
+	width: 350px;
+	margin: auto;
+}
+
+#table {
+  display: table;
+  padding: 0;
+  width: 351px;
+  height:351px;
+
+}
+
+.row {
+  display: table-row;
+  background-color: #f2dede;
+ /* border-left-color: #0c0c0c; /* Цвет линии слева
+  border-left-style: solid; /* Стиль линии
+  border-left-width: 7px*/
+}
+
+.cell {
+  display: table-cell;
+	width: 117px;
+	height: 117px;
+  background-color: #CAD1F2;
+  border-color: #c09853;
+  text-align: center;
+	vertical-align: middle;
+  font-size: 50px;
+	box-sizing: border-box;
+}
+
+.bottom {
+	border-bottom: 3px solid black;
+}
+
+.left {
+	border-left: 3px solid black;
+}
+
+#h1 {
+	display: none;
+}
+
+#consLog {
+	display: none;
+  text-align: center;
+  height: 20px;
+  width: 100px;
+}
+#result {
+	display: none;
+  background-color: #CAD1F2;
+  text-align: center;
+  font-size: 50px;
+	width: 351px;
+  height: 60px;
+  margin: auto;
+	margin-top: 20px;
+	position: fixed;
+	top: 1%;
+	left: 23%;
+	bottom: 15%;
+}
+#container {
+	margin-top: 10px;
+	position: fixed;
+	top: 13%;
+	left: 23%;
+	bottom: 15%;
+}
+#partyO {
+	border-width: 3px;
+}
+#partyX {
+	border-width: 3px;
+}

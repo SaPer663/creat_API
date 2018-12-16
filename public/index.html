@@ -2,59 +2,24 @@
   <html>
     <head>
       <meta charset="utf-8">
-      <title>EASY</title>
+      <title>Крестики-нолики</title>
       <link rel="stylesheet" href="css/styles.css">
       <!--<script Defer Type="Text/JavaScript" src="js/js.js"></script>-->
       <script Defer Type="Text/JavaScript" src="js/easy.js"></script>
       <!--<script Defer Type="Text/JavaScript" src="js/easy.js"></script>-->
     </head>
     <body>
-	    <h1 id="h1">hi!</h1>
-	    <div>
-	      <button id="consLog">console.log</button>
-	    </div>
-      <div id="result">
+      <div>
+        <form action="server.js" method="get">
+          <select size="1">
+            <option disabled>Выбери сложность</option>
+            <option value="/middle">Лёгкая</option>
+            <option value="/middle">Средняя</option>
+            <option value="/middle">Трудная</option>
+
+          </select>
+        </form>
       </div>
-      <div id="container">
-	      <div class="whomToPlay">
-	        <h2>Чем играешь?</h2>
-        </div>
-        <div class="button">
-	        <button id="partyX" onclick=""> X </button>
-		      <button id="partyO" onclick=""> O </button>
-	      </div>
-	      <div class="start">
-	        <button id="startButton" onclick=""> Играть </button>
-	      </div>
-        <div class="wrapper">
-          <div id="table">
-            <div class="row">
-              <div class="cell bottom" id="one1" onclick="">
-              </div>
-              <div class="cell bottom left" id="two2" onclick="">
-              </div>
-              <div class="cell bottom left" id="three3" onclick="">
-              </div>
-            </div>
-            <div class="row">
-              <div class="cell bottom" id="four4" onclick="">
-              </div>
-              <div class="cell bottom left" id="five5"  >
-              </div>
-              <div class="cell bottom left" id="six6" onclick="">
-              </div>
-            </div>
-            <div class="row">
-              <div class="cell" id="seven7" onclick="">
-              </div>
-              <div class="cell left" id="eight8" onclick="">
-              </div>
-              <div class="cell left" id="nine9" onclick="">
-              </div>
-            </div>
-	        </div>
-	      </div>
-      </div>
-      <div id="line"></div>
+
 	  </body>
   </html>

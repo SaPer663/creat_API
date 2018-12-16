@@ -10,9 +10,9 @@
     </head>
     <body>
       <div>
-        <form action="server.js" method="get">
-          <select size="1">
-            <option disabled>Выбери сложность</option>
+        <form name="form1" action="server.js" method="get">
+          <select size="1" onchange="javascript:document.forms['form1'].submit();">
+            <option value="null">Выбери сложность</option>
             <option value="/middle">Лёгкая</option>
             <option value="/middle">Средняя</option>
             <option value="/middle">Трудная</option>
